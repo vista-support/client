@@ -1,0 +1,47 @@
+{
+	"name": "client",
+	"description": "client for vista-support",
+	"version": "1.0.0",
+	"author": "Maria Komissarova",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vista-support/client"
+	},
+	"scripts": {
+		"start": "npm run build && node server.js",
+		"build": "webpack --config ./webpack.prod.config.js",
+		"dev": "webpack-dev-server --open --config ./webpack.dev.config.js",
+		"lint": "eslint .",
+		"prettier": "npx prettier -w .",
+		"docker-build": "docker build . -t vista-support/client",
+		"docker-start": "docker run -d -p 8000:3000 --name client-server vista-support/client"
+	},
+	"engines": {
+		"node": "18"
+	},
+	"dependencies": {
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-router-dom": "6.15.0"
+	},
+	"devDependencies": {
+		"@types/react": "18.2.21",
+		"@types/react-dom": "18.2.7",
+		"@typescript-eslint/eslint-plugin": "6.6.0",
+		"@typescript-eslint/parser": "6.6.0",
+		"dotenv-webpack": "8.0.1",
+		"eslint": "8.49.0",
+		"eslint-plugin-react": "7.33.2",
+		"file-loader": "6.2.0",
+		"html-webpack-plugin": "5.5.3",
+		"mini-css-extract-plugin": "^2.7.6",
+		"terser-webpack-plugin": "5.3.9",
+		"ts-loader": "9.4.4",
+		"typescript": "5.2.2",
+		"webpack": "5.88.2",
+		"webpack-cli": "5.1.4",
+		"webpack-dev-server": "4.15.1",
+		"webpack-merge": "5.9.0"
+	}
+}
