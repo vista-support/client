@@ -1,0 +1,14 @@
+.select {
+  width: 100%;
+  height: 46px;
+  background-color: transparent;
+  border: none;
+  color: var(--color-white);
+  &:focus {
+    outline: none;
+  }
+}
+
+.option {
+  color: var(--color-layout);
+}

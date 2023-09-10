@@ -43,16 +43,12 @@ module.exports = {
         },
       },
       {
-        test: /\.scss$/i,
+        test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: { sourceMap: true },
-          },
+          'css-loader',
           {
             loader: 'sass-loader',
-            options: { sourceMap: true },
           },
         ],
       },
@@ -60,5 +56,14 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
+    alias: {
+      '@app': path.resolve(__dirname, 'src/app'),
+      '@util': path.resolve(__dirname, 'src/util'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@widgets': path.resolve(__dirname, 'src/widgets'),
+      '@features': path.resolve(__dirname, 'src/features'),
+      '@shared': path.resolve(__dirname, 'src/shared'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
+    },
   },
 };

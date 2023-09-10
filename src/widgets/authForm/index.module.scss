@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: var(--color-white);
+  font-size: 24px;
+}
+
+.button {
+  margin-top: 160px;
+}
+
+.link {
+  color: var(--color-button);
+  &:hover {
+    color: var(--color-button-hover);
+  }
+}

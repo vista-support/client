@@ -1,0 +1,40 @@
+.container {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+  padding: .625rem;
+  border-bottom: .0625rem solid var(--color-gray);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: .625rem;
+  font-size: 1.25rem;
+}
+
+.id {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: 'liga' off;
+}
+
+.description {
+  display: none;
+  padding-left: .625rem;
+}
+
+.button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: auto;
+}

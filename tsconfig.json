@@ -18,6 +18,15 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "paths": {
+      "@app/*": ["./src/app/*"],
+      "@util/*": ["./src/util/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@features/*": ["./src/features/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@assets/*": ["./src/assets/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules"]
